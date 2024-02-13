@@ -11,6 +11,4 @@ jobs:
             SALUDO: Hola
         steps:
             - name: saludar
-              run: echo "$SALUDO, $NOMBRE, hoy es $DIA_DE_SEMANA."
-              env:
-                    NOMBRE: "Mundo"
+              run: echo "$SALUDO, ${{ vars.NOMBRE }}, hoy es ${{ ENV.DIA_DE_SEMANA }}."
